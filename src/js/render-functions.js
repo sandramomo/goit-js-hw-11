@@ -18,9 +18,10 @@ export function createGallery(images) {
   const markup = images.map(image => createImage(image)).join('');
   hideLoader();
   gallery.innerHTML = markup;
-  new SimpleLightbox('.gallery a', {
+  const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
   });
+  lightbox.refresh()
 }
 export function clearGallery() {
   const gallery = document.querySelector('.gallery');
