@@ -21,7 +21,7 @@ export function createGallery(images) {
   const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
   });
-  lightbox.refresh()
+  lightbox.refresh();
 }
 export function clearGallery() {
   const gallery = document.querySelector('.gallery');
@@ -30,12 +30,12 @@ export function clearGallery() {
 export function showLoader() {
   const loader = document.querySelector('.loader');
   const classes = loader.classList;
-  classes.toggle(`visible`);
+  classes.toggle(`invisible`);
 }
 export function hideLoader() {
   const loader = document.querySelector('.loader');
   const classes = loader.classList;
-  classes.toggle(`visible`);
+  classes.toggle(`invisible`);
 }
 function createImage(image) {
   return `<li><div class="image-box">
