@@ -6,7 +6,6 @@ const lightbox = new SimpleLightbox('.gallery a', {
 export function createGallery(images) {
   const gallery = document.querySelector('.gallery');
   const markup = images.map(image => createImage(image)).join('');
-  hideLoader();
   gallery.innerHTML = markup;
   lightbox.refresh();
 }

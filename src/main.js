@@ -50,9 +50,11 @@ function handleFormSubmit(e) {
         return;
       } else {
         createGallery(res.hits);
+        hideLoader();
       }
     })
     .catch(err => {
+      hideLoader();
       console.log(err);
       e.target.reset();
     });
